@@ -14,7 +14,8 @@ network protocol.
 
 ## Networking
 
-The peer-to-peer network works over TCP. We use TCP port 18018. Your node must listen
+The peer-to-peer network works over TCP. The default TCP port of the protocol is 18018,
+but you can use any port. Your node must listen
 to this port and connect to peers using this port. If your node is running behind NAT,
 make sure this port is forwarded.
 
@@ -176,15 +177,19 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a "version" key, which is always set to "0.1.0". If the version you receive differs
-from "0.1" you must disconnect. You must exchange a hello message both ways before you exchange any
+must also contain a `version` key, which is always set to `0.1.2`. If the version you receive differs
+from `0.1.x` you must disconnect. The message can also contain an `agent` key, with a string description
+of the node software name and version the node is running.
+
+You must exchange a hello message both ways before you exchange any
 other message. If a message is sent prior to the hello message, you must close the connection.
 Messages can be sent in any order after that.
 
 ```json
 {
   "type": "hello",
-  "version": "0.1.0"
+  "version": "0.1.2",
+  "agent": "Marabu-Core Client 0.7"
 }
 ```
 
@@ -227,6 +232,8 @@ to 18018. It is up to your node implementation to decide which peers to share wi
   ]
 }
 ```
+
+When sending a `peers` message, a node can include itself in the list if it is listening for connections.
 
 ## GetObject
 
