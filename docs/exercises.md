@@ -2,16 +2,22 @@ The exercises ask you to gradually build a node for the course's blockchain netw
 The full protocol is described in the
 [protocol specification](/docs/protocol).
 
-# Exercise 1
+# Exercise 0
 
-In this exercise, you will build a simple peer-to-peer node that can exchange
-messages and perform peer discovery.
+In this exercise, you will set up your repository and exchange a 'hello' message
+with any peer connecting to you.
 
 - Decide what programming language you will use. We recommend a language you are proficient in.
 - Share your repository URL on GitHub/GitLab so that we can put it on the course website.
-- Implement the networking core of your node. Your node must listen to TCP port 18018 for connections.
+- Implement the networking core of your node. Your node must listen to TCP port 18018 (or a port of your choice) for connections.
 - Implement message parsing, defragmentation, and canonical JSON encoding and decoding.
 - Implement the protocol handshake using the `hello` messages.
+
+# Exercise 1
+
+In this exercise, you will extend your peer-to-peer node so that it can exchange
+messages and perform peer discovery.
+
 - Implement peer discovery bootstrapping by hard-coding some peers.
 - Store a list of discovered peers locally. These should survive reboots.
 - Implement peer discovery using the `getpeers` and `peers` messages.
