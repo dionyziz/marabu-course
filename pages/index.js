@@ -13,8 +13,8 @@ export default function Home() {
         </p>
 
         <p>
-          Implement the <Link href='docs/protocol'><a>protocol</a></Link>
-          by following through with the <Link href='docs/exercises'><a>exercises</a></Link>.
+          Implement the <Link href='docs/protocol'><a>protocol</a></Link> by
+          following through with the <Link href='docs/exercises'><a>exercises</a></Link>.
         </p>
       </main>
 
