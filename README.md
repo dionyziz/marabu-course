@@ -1,1 +1,1 @@
-The website at [https://new.blockchain-course.org/](https://new.blockchain-course.org/).
+A blockchain course. The repo is the course website at [https://marabu.dev/](https://marabu.dev/).
