@@ -15,9 +15,7 @@ network protocol.
 ## Networking
 
 The peer-to-peer network works over TCP. The default TCP port of the protocol is 18018,
-but you can use any port. Your node must listen
-to this port and connect to peers using this port. If your node is running behind NAT,
-make sure this port is forwarded.
+but you can use any port. If your node is running behind NAT, make sure your port is forwarded.
 
 ## Bootstrapping
 
@@ -177,8 +175,8 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.1.2`. If the version you receive differs
-from `0.1.x` you must disconnect. The message can also contain an `agent` key, with a string description
+must also contain a `version` key, which is always set to `0.2.0`. If the version you receive differs
+from `0.2.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
 You must exchange a hello message both ways before you exchange any
@@ -188,7 +186,7 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "agent": "Marabu-Core Client 0.7"
 }
 ```
@@ -205,31 +203,18 @@ message has no payload and must be responded-to with a `peers` message.
 ## Peers
 
 This message can be volunteered or sent in response to a `getpeers` message. It contains a `peers`
-key which is an array of peers. Every peer is a dictionary which contains one or more of:
-
-- An `ipv4` key containing the IPv4 address of the peer
-- An `ipv6` key containing the IPv6 address of the peer
-- A `dns` key containing the domain name of the peer
-
-Optionally, it can contain a a `port` key with the TCP port of the peer. Otherwise, this defaults
-to 18018. It is up to your node implementation to decide which peers to share with your peers.
+key which is an array of peers. Every peer is a string in the form of `<host>:<port>`.  The default port
+is 18018 but other ports are valid. Inclusion of the port in the string is mandatory.
+Examples for different types of hosts are provided below.
 
 ```json
 {
   "type": "peers",
   "peers": [
-    {
-      "dns": "dionyziz.com",
-      "ipv4": "139.162.130.195",
-      "port": 18018
-    },
-    {
-      "ipv4": "138.197.191.170"
-    },
-    {
-      "ipv6": "fe80::f03c:91ff:fe2c:5a79"
-    }
-  ]
+    "dionyziz.com:18018", /* dns */
+    "138.197.191.170:18018", /* ipv4 */
+    "[fe80::f03c:91ff:fe2c:5a79]:18018" /* ipv6 */
+   ]
 }
 ```
 
