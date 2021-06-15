@@ -82,13 +82,14 @@ In this exercise, you will implement your own miner for your Marabu node.
 
 Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
 
-1. "Say hello to Ethereum"
-2. "Faucet smart contract"
-3. "ERC-20 token"
-4. "Dutch Auction Implementation"
-5. "Name Service"
-6. "Vickrey Auction Implementation"
-7. "Game of Thrones"
+- "Say hello to Ethereum"
+- "Simple storage smart contract"
+- "Faucet smart contract"
+- "ERC-20 token"
+- "Dutch Auction Implementation"
+- "Name Service"
+- "Vickrey Auction Implementation"
+- "Game of Thrones"
 
 # Exercise 8
 
