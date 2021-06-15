@@ -40,6 +40,7 @@ The following implementations are solutions to the exercises. If you want to mak
 * [marabou](https://github.com/pkakelas/marabou-client), a Marabu node in Go by Dimitris Lamprinos
 * [calabu](https://github.com/tzinas/calabu), a Marabu node in JavaScript by Apostolos Tzinas
 * [malibu](https://github.com/dionyziz/marabu), a Marabu node in TypeScript by Dionysis Zindros (a bootstrapping node is running on keftes.di.uoa.gr:18018)
+* [birdman](https://github.com/k4m4/birdman), a Marabu node in TypeScript by Nikolaos Kamarinakis
 
 ## Who is this course for?
 
