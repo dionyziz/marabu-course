@@ -1,13 +1,19 @@
-The exercises ask you to gradually build a node for the course's blockchain network.
+These are programming exercises.
+
+The exercises ask you to gradually build a node for the course's blockchain network, Marabu.
 The full protocol is described in the
 [protocol specification](/docs/protocol).
 
+Some exercises divert from the main node development and are simple independent programming exercises.
+
 # Exercise 0
 
+Start coding the implementation of your Marabu node.
 In this exercise, you will set up your repository and exchange a 'hello' message
 with any peer connecting to you.
 
 - Decide what programming language you will use. We recommend a language you are proficient in.
+- Find a nice name for your node!
 - Share your repository URL on GitHub/GitLab so that we can put it on the course website.
 - Implement the networking core of your node. Your node must listen to TCP port 18018 (or a port of your choice) for connections.
 - Implement message parsing, defragmentation, and canonical JSON encoding and decoding.
@@ -15,7 +21,7 @@ with any peer connecting to you.
 
 # Exercise 1
 
-In this exercise, you will extend your peer-to-peer node so that it can exchange
+In this exercise, you will extend your Marabu node so that it can exchange
 messages and perform peer discovery.
 
 - Implement peer discovery bootstrapping by hard-coding some peers.
@@ -25,7 +31,7 @@ messages and perform peer discovery.
 
 # Exercise 2
 
-In this exercise, you will implement content addressable object exchange and gossiping.
+In this exercise, you will extend your Marabu node to implement content addressable object exchange and gossiping.
 
 - Maintain a local database of known objects.
 - Implement object exchange using the `getobject`, `ihaveobject`, `object` messages.
@@ -35,7 +41,7 @@ In this exercise, you will implement content addressable object exchange and gos
 
 # Exercise 3
 
-In this exercise, you will implement transaction generation and validation.
+In this exercise, you will implement transaction generation and validation for your Marabu node.
 
 - Create the logic to represent a transaction.
 - A transaction has inputs and outputs.
@@ -52,16 +58,46 @@ In this exercise, you will implement transaction generation and validation.
 
 # Exercise 4
 
-Block validation
+Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
+
+- "Breaking SHA256"
+- "Performing proof-of-work"
 
 # Exercise 5
 
-Mining
+In this exercise, you will implement block validation in your Marabu node.
+
+- Create the logic to represent a block.
+- Check the proof-of-work.
+- Check that all contained transactions are valid.
 
 # Exercise 6
 
-Difficulty adjustment
+In this exercise, you will implement your own miner for your Marabu node.
+
+- Create the logic to build a block.
+- Mine on the candidate block to discover proof-of-work.
 
 # Exercise 7
 
-SPV
+Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
+
+1. "Say hello to Ethereum"
+2. "Faucet smart contract"
+3. "ERC-20 token"
+4. "Dutch Auction Implementation"
+5. "Name Service"
+6. "Vickrey Auction Implementation"
+7. "Game of Thrones"
+
+# Exercise 8
+
+Solve the "Constructing a Merkle Tree" assignment on [blockchain-course.org](https://blockchain-course.org/assignment).
+
+# Exercise 9
+
+Implement SPV verification for your Marabu node. Participate in the hard fork.
+
+# Exercise 10
+
+Difficulty adjustment. Participate in the hard fork.
