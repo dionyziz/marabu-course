@@ -35,6 +35,7 @@ Throughout the course, we will also have a few additional exercises on smart con
 
 The following implementations are solutions to the exercises. If you want to make your own node, you should try not to look at them too much.
 
+* [traverso](https://github.com/petrosagg/traverso), a Marabu node in Rust by Petros Angelatos
 * [sylvstrupp](https://github.com/loukoum/sylvestrupp), a Marabu node in C++ by Giannis Gkoulioumis
 * [go-marabu](https://gogs.decrypto.org/gtklocker/go-marabu), a Marabu node in Go by Kostis Karantias
 * [marabou](https://github.com/pkakelas/marabou-client), a Marabu node in Go by Dimitris Lamprinos
