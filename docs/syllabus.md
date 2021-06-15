@@ -1,4 +1,4 @@
-Lesson 1: The Problem / The Setting / Motivation
+## Lesson 1: The Problem / The Setting / Motivation
 - Administrivia
   - Course outline
   - 56 hours total
@@ -29,8 +29,8 @@ Lesson 1: The Problem / The Setting / Motivation
   - We can pick and choose which of these features we like, e.g. centralized issuance + public verifiability
 - What is money?
   - Money is not inherently worthy -- it has value because we socially ascribe value to it
-  - It is a social contract, or social delusion (similar to laws, corporations, and human rights)
-  - Money today is fiat (but money as a social contract is ascribed to "non-fiat" money such as gold and shells, too)
+  - It is a social construct, or social delusion (similar to laws, corporations, and human rights)
+  - Money today is fiat (but money as a social contrsuct is ascribed to "non-fiat" money such as gold and shells, too)
   - Some historical notes on money
   - How do we know today who owns what? Did we track it through history? Do we have that history? No -- we trust our social environment. A kind of "honest majority" setting.
 - The role of computer science
@@ -43,8 +43,13 @@ Lesson 1: The Problem / The Setting / Motivation
   - "For all" adversaries
   - Negligibility
   - Problems hard in the average case VS problems hard in the worst case
+- The network
+  - Connectedness and message delivery
+  - The non-eclipsing assumption
+  - The gossip protocol
+- Exercises 0 and 1
 
-Lesson 2: The Application Layer - UTXO
+## Lesson 2: The Application Layer - UTXO
 - A transaction
 - Public and private keys
 - Signatures, signing, verifying, correctness, security
@@ -66,12 +71,9 @@ Lesson 2: The Application Layer - UTXO
 - What money do I own? Calculating balances
 - The UTXO as a state machine α with transaction transitions δ
 - Double spending
-Coding for this lesson:
-- Transaction creation and verification
-- Signature generation and verification
-- Address generation
+- Exercise 2 and 3
 
-Lesson 3: Blocks and chains
+## Lesson 3: Blocks and chains
 - The decentralized setting; the network
 - Adversarial and honest nodes, corruption, sybil attacks
 - Network delays, message delivery
@@ -84,44 +86,27 @@ Lesson 3: Blocks and chains
 - The chain
 - Temporary forks
 - Coming to an agreement: Blockchain convergence
-Coding for this lesson:
-- Block creation and validation
-- Dealing with blockchain reorganization
+- Exercise 4, 5, 6
 
-Lesson 4: Light verification
-- Merkle trees
-- Construction of a Merkle tree, construction of a proof
-- Merkle security definition and proof
-- The SPV protocol
-- Light clients
-- Block state commitment
-
-Lesson 5: Superlight verification
-- The non-interactive prover/verifier model
-- The polylog verifier
-- Superblocks
-- The NIPoPoW protocol
-
-Lesson 6: Blockchain Economics
+## Lesson 4: Blockchain Economics
 - The weak conservation law
 - Fees
 - The money supply
 - Supply adjustment
 
-Lesson 7: Mining
+## Lesson 5: Mining
 - Mining hardware: CPUs, GPUs, ASICs
 - Mining pools
 - The pooled mining protocol: light blocks
 - The cost of mining: Empty blocks, optimistic mining
 - Fast miners
-- Superlight mining
 
-Lesson 8: The Application Layer - Accounts
+## Lesson 6: The Application Layer - Accounts
 - A transaction
 - Balances
 - Replaybility and nonces
 
-Lesson 9: Smart contracts
+## Lesson 7: Smart contracts
 - Motivation: Payment conditions and covenants
 - Smart contracts in the UTXO model
 - Bitcoin scripts
@@ -131,14 +116,31 @@ Lesson 9: Smart contracts
 - The smart contract transaction format
 - The Merkle-Patricia trie
 - Smart contract state as a state machine
+- Exercise 7
 
-Lesson 10: Solidity overview
+## Lesson 8: Light verification
+- Merkle trees
+- Construction of a Merkle tree, construction of a proof
+- Merkle security definition and proof
+- The SPV protocol
+- Light clients
+- Block state commitment
+- Exercise 8
+
+## Lesson 9: Superlight verification
+- The non-interactive prover/verifier model
+- The polylog verifier
+- Superblocks
+- The NIPoPoW protocol
+- Superlight mining
+
+## Lesson 10: Solidity overview
 - Contracts, methods
 - Variables, data types, storage location
 - Payable methods
 - Reverting, exceptions
 
-Lesson 11: Coding in Solidity
+## Lesson 11: Coding in Solidity
 - ERC-20 tokens and ICOs
 - ERC-721 tokens and NFTs
 - Front-running
@@ -146,19 +148,18 @@ Lesson 11: Coding in Solidity
 Coding:
 - 8 exercises from blockchain-course.org
 
-Lesson 12: Blockchain Governance
+## Lesson 12: Blockchain Governance
 - Soft forks
 - Hard forks
 - Velvet forks
 
-Lesson 13: Variable difficulty
+## Lesson 13: Variable difficulty
 - Epochs, the m parameter
 - Target recalculation and difficulty adjustment
 - Difficulty clamping, the τ parameter
-Coding for this lesson:
-- Epoch-based difficulty adjustment
+- Exercise 7
 
-Lesson 14: Consensus in earnest
+## Lesson 14: Consensus in earnest
 - The backbone model in the static difficulty setting
 - Interactive Turing machines
 - The environment
@@ -176,7 +177,7 @@ Lesson 14: Consensus in earnest
 - Liveness from growth and quality
 - Safety from common prefix
 
-Lesson 15: Blockchains are secure
+## Lesson 15: Blockchains are secure
 - The honest majority assumption
 - Successful rounds and uniquely successful rounds
 - The probabilistic treatment using the random variables X, Y, and Z
@@ -187,7 +188,7 @@ Lesson 15: Blockchains are secure
 - A proof of the Common Prefix property
 - A proof of the Chain Quality property
 
-Lesson 16: Proof of stake
+## Lesson 16: Proof of stake
 - The proof-of-work environmental impact
 - Proof-of-stake time: The slot
 - Epoch randomness
