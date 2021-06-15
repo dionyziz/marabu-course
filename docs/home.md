@@ -36,11 +36,11 @@ Throughout the course, we will also have a few additional exercises on smart con
 The following implementations are solutions to the exercises. If you want to make your own node, you should try not to look at them too much.
 
 * [sylvstrupp](https://github.com/loukoum/sylvestrupp), a Marabu node in C++ by Giannis Gkoulioumis
+* [birdman](https://github.com/k4m4/birdman), a Marabu node in TypeScript by Nikolaos Kamarinakis
 * [go-marabu](https://gogs.decrypto.org/gtklocker/go-marabu), a Marabu node in Go by Kostis Karantias
 * [marabou](https://github.com/pkakelas/marabou-client), a Marabu node in Go by Dimitris Lamprinos
 * [calabu](https://github.com/tzinas/calabu), a Marabu node in JavaScript by Apostolos Tzinas
 * [malibu](https://github.com/dionyziz/marabu), a Marabu node in TypeScript by Dionysis Zindros (a bootstrapping node is running on keftes.di.uoa.gr:18018)
-* [birdman](https://github.com/k4m4/birdman), a Marabu node in TypeScript by Nikolaos Kamarinakis
 
 ## Who is this course for?
 
