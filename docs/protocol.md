@@ -12,6 +12,9 @@ double spending, and blocks, all of which must be validated carefully.
 The chain is a variable-difficulty proof-of-work UTXO-based blockchain over a TCP
 network protocol.
 
+The chain is called *Marabu* (like the bird, but spelled with *u* instead of *ou*), but you
+should name your node something else.
+
 ## Networking
 
 The peer-to-peer network works over TCP. The default TCP port of the protocol is 18018,
