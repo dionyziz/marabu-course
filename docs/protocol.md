@@ -307,7 +307,7 @@ Request the current blockchain tip of the peer with a message of type `getchaint
 
 ## ChainTip
 
-This message, with type `chaintip`, is sent as a response to the `getchaintip` message, or it can be volunteer.
+This message, with type `chaintip`, is sent as a response to the `getchaintip` message, or it can be volunteered.
 It includes a single key called `blockid` with the blockid of the current tip.
 
 ```json
