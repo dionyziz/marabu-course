@@ -42,7 +42,7 @@ export default function Home() {
           The following implementations are solutions to the exercises. If you want to make your own node, you should try not to look at them too much.
 
           <ul>
-            <li><a href='https://github.com/loukoum/marabu'>marabu</a>, a Marabu node in C++ by Giannis Goulioumis</li>
+            <li><a href='https://github.com/loukoum/sylvestrupp'>sylvestrupp</a>, a Marabu node in C++ by Giannis Gkoulioumis</li>
             <li><a href='https://gogs.decrypto.org/gtklocker/go-marabu'>go-marabu</a>, a Marabu node in Go by Kostis Karantias</li>
             <li><a href='https://github.com/pkakelas/marabou-client'>marabou</a>, a Marabu node in Go by Dimitris Lamprinos</li>
             <li><a href='https://github.com/dionyziz/marabu'>malibu</a>, a Marabu node in TypeScript by Dionysis Zindros</li>
@@ -69,7 +69,7 @@ export default function Home() {
         <ul>
           <li>Instructor: Dionysis Zindros</li>
           <li>Teaching Assistant: Kostis Karantias</li>
-          <li>Students: Giannis Goulioumis, Nikolaos Kamarinakis, Dimitris Lamprinos, Apostolos Tzinas</li>
+          <li>Students: Giannis Gkoulioumis, Nikolaos Kamarinakis, Dimitris Lamprinos, Apostolos Tzinas</li>
         </ul>
 
         <h2>Bibliography</h2>
