@@ -1,8 +1,9 @@
 import { readMd } from '../lib/docs'
 import Head from 'next/head'
 import Layout from '../components/layout'
+import Markdown from '../components/markdown'
 
-export default function Home({ docData }) {
+export default function Home({ source }) {
   return (
     <Layout>
       <Head>
@@ -10,7 +11,7 @@ export default function Home({ docData }) {
       </Head>
 
       <main>
-        <div dangerouslySetInnerHTML={{ __html: docData.contentHtml }} />
+        <Markdown source={source} />
       </main>
       <footer>
         Creative Commons 4.0 Attribution
@@ -20,11 +21,11 @@ export default function Home({ docData }) {
 }
 
 export async function getStaticProps(context) {
-  const docData = await readMd('home.md')
+  const { mdxSource } = await readMd('home.md')
 
   return {
     props: {
-      docData
+      source: mdxSource
     }
   }
 }

@@ -1,8 +1,9 @@
 import Layout from '../../components/layout'
 import { getAllDocIds, getDocData } from '../../lib/docs'
 import Head from 'next/head'
+import Markdown from '../../components/markdown'
 
-export default function Doc({ docData }) {
+export default function Doc({ source }) {
   return (
     <Layout>
       <Head>
@@ -10,17 +11,17 @@ export default function Doc({ docData }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div dangerouslySetInnerHTML={{ __html: docData.contentHtml }} />
+      <Markdown source={source} />
     </Layout>
   )
 }
 
 export async function getStaticProps({ params }) {
-  const docData = await getDocData(params.id)
+  const { mdxSource } = await getDocData(params.id)
 
   return {
     props: {
-      docData
+      source: mdxSource
     }
   }
 }
