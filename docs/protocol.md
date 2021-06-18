@@ -178,7 +178,7 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.2.0`. If the version you receive differs
+must also contain a `version` key, which is always set to `0.2.1`. If the version you receive differs
 from `0.2.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
@@ -189,7 +189,7 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "agent": "Marabu-Core Client 0.7"
 }
 ```
