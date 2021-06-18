@@ -194,6 +194,19 @@ Messages can be sent in any order after that.
 }
 ```
 
+## Error
+
+*Optionally*, you can send objects with implementation-specific error messages to describe any exceptions
+encountered. An error object should be of type `error` and contain an `error` key with a string value
+that describes the error at hand.
+
+```json
+{
+  "type": "error",
+  "error": "Unsupported message type received"
+}
+```
+
 ## GetPeers
 
 If you want to know what peers are known to your peer, you send them a `getpeers` message. This
