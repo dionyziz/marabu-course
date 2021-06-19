@@ -42,15 +42,13 @@ format.
 
 ## Signatures
 
-We use ECDSA signatures using SHA-256 hash as digest and the secp256k1 curve. Public keys consist
-of a point `(x, y)` and should be byte-encoded in the
-[uncompressed SEC format](https://www.oreilly.com/library/view/programming-bitcoin/9781492031482/ch04.html).
-Signatures consist of a pair `(r, s)` and should be byte-encoded in the
-[DER format](https://www.oreilly.com/library/view/programming-bitcoin/9781492031482/ch04.html).
+We use Ed25519 signatures. Public keys and signatures should be
+byte-encoded as described in [RFC 8032](https://datatracker.ietf.org/doc/html/rfc8032#section-5.1.5).
+A library will typically take care of this process, for example
+[`crypto/ed25519` in Go](https://golang.org/pkg/crypto/ed25519/#GenerateKey).
 Once a signature or public key is byte-encoded, it is converted to hex to represent as a string
 within our JSON.
-Whenever we refer to a "public key" or a "signature" in this protocol, we mean uncompressed SEC
-or DER format byte-encoded hexified data respectively.
+Whenever we refer to a "public key" or a "signature" in this protocol, we mean the byte-encoded hexified data respectively.
 
 ## Hexification
 
@@ -81,8 +79,7 @@ An input contains a pointer to a
 previous output (the outpoint), and a signature. An input is a dictionary containing two
 keys: An `outpoint` key and a `sig` key. The `outpoint` key contains a dictionary of two keys:
 `txid` and `index`. The `txid` is the txid of a previous transaction, while the `index` is the natural
-number (zero-based) indexing an output within that transaction. The `sig` key contains the (DER encoded)
-signature.
+number (zero-based) indexing an output within that transaction. The `sig` key contains the signature.
 
 Signatures are created using the private keys corresponding to the public keys that are pointed to
 by their respective outpoint. Signatures are created on the plaintext which consists of the transaction
@@ -90,7 +87,7 @@ they (not their public keys!) are contained within, except that the `sig` values
 This is necessary because a signature cannot sign itself.
 
 An output is a dictionary with keys `value` and `pubkey`. The `value` is a non-negative integer indicating
-how much value is carried by the output. The `pubkey` is a (uncompressed SEC encoded) public key, the
+how much value is carried by the output. The `pubkey` is a public key, the
 receipient of the money.
 
 ```json
@@ -102,12 +99,12 @@ receipient of the money.
         "txid": "f71408bf847d7dd15824574a7cd4afdfaaa2866286910675cd3fc371507aa196",
         "index": 0
       },
-      "sig": "30450220397116930C282D1FCB71166A2D06728120CF2EE5CF6CCD4E2D822E8E0AE24A300221009E997D4718A7603942834FBDD22A4B856FC4083704EDE62033CF1A77CB9822A9"
+      "sig": "3869a9ea9e7ed926a7c8b30fb71f6ed151a132b03fd5dae764f015c98271000e7da322dbcfc97af7931c23c0fae060e102446ccff0f54ec00f9978f3a69a6f0f"
     }
   ],
   "outputs": [
     {
-      "pubkey": "0420f34c2786b4bae593e22596631b025f3ff46e200fc1d4b52ef49bbdc2ed00b26c584b7e32523fb01be2294a1f8a5eb0cf71a203cc034ced46ea92a8df16c6e9",
+      "pubkey": "077a2683d776a71139fd4db4d00c16703ba0753fc8bdc4bd6fc56614e659cde3",
       "value": 5100000000
     }
   ]
@@ -178,8 +175,8 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.2.1`. If the version you receive differs
-from `0.2.x` you must disconnect. The message can also contain an `agent` key, with a string description
+must also contain a `version` key, which is always set to `0.3.0`. If the version you receive differs
+from `0.3.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
 You must exchange a hello message both ways before you exchange any
@@ -189,7 +186,7 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "agent": "Marabu-Core Client 0.7"
 }
 ```
