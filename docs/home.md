@@ -1,6 +1,3 @@
-# Blockchain Foundations:
-# A Blockchain Course
-
 This graduate-level course teaches you about blockchain foundations. The course focuses on the first principles
 and foundations behind blockchains with the aim of understanding how and why blockchain technology works and is
 secure. We do not focus on Bitcoin or Ethereum engineering peculiarities, but we explore the general concepts
