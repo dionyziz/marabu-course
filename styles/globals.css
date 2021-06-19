@@ -2,3 +2,8 @@ blockquote {
     padding: 1em;
     background-color: #eee;
 }
+pre {
+    background-color: #eee;
+    padding: 1em;
+    white-space: pre-wrap;
+}
