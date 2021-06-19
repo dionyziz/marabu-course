@@ -10,12 +10,7 @@ export default function Home({ source }) {
         <title>A Blockchain Course</title>
       </Head>
 
-      <main>
-        <Markdown source={source} />
-      </main>
-      <footer>
-        Creative Commons 4.0 Attribution
-      </footer>
+      <Markdown source={source} />
     </Layout>
   )
 }
