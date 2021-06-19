@@ -42,15 +42,13 @@ format.
 
 ## Signatures
 
-We use ECDSA signatures using SHA-256 hash as digest and the secp256k1 curve. Public keys consist
-of a point `(x, y)` and should be byte-encoded in the
-[uncompressed SEC format](https://www.oreilly.com/library/view/programming-bitcoin/9781492031482/ch04.html).
-Signatures consist of a pair `(r, s)` and should be byte-encoded in the
-[DER format](https://www.oreilly.com/library/view/programming-bitcoin/9781492031482/ch04.html).
+We use Ed25519 signatures. Public keys and signatures should be
+byte-encoded as described in [RFC 8032](https://datatracker.ietf.org/doc/html/rfc8032#section-5.1.5).
+A library will typically take care of this process, for example
+[`crypto/ed25519` in Go](https://golang.org/pkg/crypto/ed25519/#GenerateKey).
 Once a signature or public key is byte-encoded, it is converted to hex to represent as a string
 within our JSON.
-Whenever we refer to a "public key" or a "signature" in this protocol, we mean uncompressed SEC
-or DER format byte-encoded hexified data respectively.
+Whenever we refer to a "public key" or a "signature" in this protocol, we mean the byte-encoded hexified data respectively.
 
 ## Hexification
 
@@ -81,8 +79,7 @@ An input contains a pointer to a
 previous output (the outpoint), and a signature. An input is a dictionary containing two
 keys: An `outpoint` key and a `sig` key. The `outpoint` key contains a dictionary of two keys:
 `txid` and `index`. The `txid` is the txid of a previous transaction, while the `index` is the natural
-number (zero-based) indexing an output within that transaction. The `sig` key contains the (DER encoded)
-signature.
+number (zero-based) indexing an output within that transaction. The `sig` key contains the signature.
 
 Signatures are created using the private keys corresponding to the public keys that are pointed to
 by their respective outpoint. Signatures are created on the plaintext which consists of the transaction
@@ -90,7 +87,7 @@ they (not their public keys!) are contained within, except that the `sig` values
 This is necessary because a signature cannot sign itself.
 
 An output is a dictionary with keys `value` and `pubkey`. The `value` is a non-negative integer indicating
-how much value is carried by the output. The `pubkey` is a (uncompressed SEC encoded) public key, the
+how much value is carried by the output. The `pubkey` is a public key, the
 receipient of the money.
 
 ```json
@@ -178,7 +175,7 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.2.1`. If the version you receive differs
+must also contain a `version` key, which is always set to `0.2.0`. If the version you receive differs
 from `0.2.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
@@ -189,21 +186,8 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "agent": "Marabu-Core Client 0.7"
-}
-```
-
-## Error
-
-*Optionally*, you can send objects with implementation-specific error messages to describe any exceptions
-encountered. An error object should be of type `error` and contain an `error` key with a string value
-that describes the error at hand.
-
-```json
-{
-  "type": "error",
-  "error": "Unsupported message type received"
 }
 ```
 
