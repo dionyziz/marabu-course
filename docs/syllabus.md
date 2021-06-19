@@ -93,13 +93,17 @@
 - Fees
 - The money supply
 - Supply adjustment
+- Exercise 7
 
-## Lesson 5: Mining
+## Lesson 5: Mining and Wallets
 - Mining hardware: CPUs, GPUs, ASICs
 - Mining pools
 - The pooled mining protocol: light blocks
 - The cost of mining: Empty blocks, optimistic mining
 - Fast miners
+- Online and offline wallets
+- Wallet seeds
+- Hardware wallets, brain wallets
 
 ## Lesson 6: The Application Layer - Accounts
 - A transaction
@@ -116,7 +120,7 @@
 - The smart contract transaction format
 - The Merkle-Patricia trie
 - Smart contract state as a state machine
-- Exercise 7
+- Exercise 8
 
 ## Lesson 8: Light verification
 - Merkle trees
@@ -125,7 +129,7 @@
 - The SPV protocol
 - Light clients
 - Block state commitment
-- Exercise 8
+- Exercises 8, 9
 
 ## Lesson 9: Superlight verification
 - The non-interactive prover/verifier model
@@ -145,8 +149,7 @@
 - ERC-721 tokens and NFTs
 - Front-running
 - Randomness
-Coding:
-- 8 exercises from blockchain-course.org
+- Exercise 10
 
 ## Lesson 12: Blockchain Governance
 - Soft forks
@@ -157,7 +160,7 @@ Coding:
 - Epochs, the m parameter
 - Target recalculation and difficulty adjustment
 - Difficulty clamping, the τ parameter
-- Exercise 7
+- Exercise 11
 
 ## Lesson 14: Consensus in earnest
 - The backbone model in the static difficulty setting

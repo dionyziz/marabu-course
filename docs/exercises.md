@@ -80,6 +80,25 @@ In this exercise, you will implement your own miner for your Marabu node.
 
 # Exercise 7
 
+In this exercise, you will try to attack your peers. Look at the source code
+of the implementations of three of your fellow students.
+
+- Find at least one attack against each of your peers.
+- Discuss and fix the attacks that your peers found on your node.
+
+You can perform network-level attacks, denial of service attacks, or attack
+their transaction and block validation.
+
+# Exercise 8
+
+Solve the "Constructing a Merkle Tree" assignment on [blockchain-course.org](https://blockchain-course.org/assignment).
+
+# Exercise 9
+
+Implement SPV verification for your Marabu node. Participate in the hard fork.
+
+# Exercise 10
+
 Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
 
 - "Say hello to Ethereum"
@@ -91,14 +110,6 @@ Solve the following [blockchain-course.org](https://blockchain-course.org/assign
 - "Vickrey Auction Implementation"
 - "Game of Thrones"
 
-# Exercise 8
-
-Solve the "Constructing a Merkle Tree" assignment on [blockchain-course.org](https://blockchain-course.org/assignment).
-
-# Exercise 9
-
-Implement SPV verification for your Marabu node. Participate in the hard fork.
-
-# Exercise 10
+# Exercise 11
 
 Difficulty adjustment. Participate in the hard fork.
