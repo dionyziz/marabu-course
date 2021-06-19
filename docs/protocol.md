@@ -144,7 +144,7 @@ The genesis block has a null `previd`. This is our genesis block:
 {
   "type": "block",
   "txids": [],
-  "nonce": "ea20f18102256b6af34a9ff33291216ba6c28486a01620e6a907eb67531685c8",
+  "nonce": "5a22386cd6aa170fa1717af1d4b2397ef86317e53991693356f2102591893569",
   "previd": null,
   "created": "1622826460",
   "T": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
@@ -155,9 +155,9 @@ The genesis block has a null `previd`. This is our genesis block:
 All valid chains must extend genesis. Each block must have a timestamp which is later than its
 predecessor.
 
-The `nonce` value for this block is the SHA256 hash of the following (linebreak terminated) string:
+The `nonce` value for this block is the SHA256 hash of the following string:
 
-"The Guardian Science 4 Jun 2021: SpaceX rocket heads to ISS with squid, toothpaste and avocados"
+> The Guardian Science 4 Jun 2021: SpaceX rocket heads to ISS with squid, toothpaste and avocados
 
 The `txids` in a block may contain one coinbase transaction. This transaction must be the first in the
 txids. That transaction has no inputs. It has exactly one output which generates 50 * 10^9 new coins.
@@ -175,7 +175,7 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.3.0`. If the version you receive differs
+must also contain a `version` key, which is always set to `0.3.1`. If the version you receive differs
 from `0.3.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
@@ -186,7 +186,7 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "agent": "Marabu-Core Client 0.7"
 }
 ```
