@@ -162,6 +162,8 @@ The `nonce` value for this block is the SHA256 hash of the following string:
 The `txids` in a block may contain one coinbase transaction. This transaction must be the first in the
 txids. That transaction has no inputs. It has exactly one output which generates 50 * 10^9 new coins.
 
+All non-genesis blocks must have a target `T` of `00000002af0000000000000000000000000000000000000000000000000000000`.
+
 # Messages
 
 Every message exchanged by two peers over TCP is a JSON message. These JSON messages are separated
@@ -175,8 +177,8 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.3.1`. If the version you receive differs
-from `0.3.x` you must disconnect. The message can also contain an `agent` key, with a string description
+must also contain a `version` key, which is always set to `0.4.0`. If the version you receive differs
+from `0.4.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
 You must exchange a hello message both ways before you exchange any
@@ -186,7 +188,7 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "agent": "Marabu-Core Client 0.7"
 }
 ```
