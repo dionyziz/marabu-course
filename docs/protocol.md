@@ -163,6 +163,8 @@ The `txids` in a block may contain one coinbase transaction. This transaction mu
 txids. That transaction has no inputs. It has exactly one output which generates 50 * 10^9 new coins.
 
 All non-genesis blocks must have a target `T` of `00000002af0000000000000000000000000000000000000000000000000000000`.
+The genesis blockid is `cb7226628bcedbd913bdfa5311fc07d17cde2697dda5d24ea75a2a60646ff317`. Check this
+to ensure your implementation is performing correct JSON canonicalization.
 
 # Messages
 
