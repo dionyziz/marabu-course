@@ -33,6 +33,7 @@ Throughout the course, we will also have a few additional exercises on smart con
 The following implementations are solutions to the exercises. If you want to make your own node, you should try not to look at them too much.
 
 * [traverso](https://github.com/petrosagg/traverso), a Marabu node in Rust by Petros Angelatos
+* [marablu](https://github.com/mbalamat/marablu), a Marabu node in Deno by Marios Balamatsias
 * [sylvstrupp](https://github.com/loukoum/sylvestrupp), a Marabu node in C++ by Giannis Gkoulioumis
 * [birdman](https://github.com/k4m4/birdman), a Marabu node in TypeScript by Nikolaos Kamarinakis
 * [pengiun](https://github.com/dimkarakostas/penguin), a Marabu node in Python by Dimitris Karakostas
