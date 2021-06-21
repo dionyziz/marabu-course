@@ -142,28 +142,25 @@ The genesis block has a null `previd`. This is our genesis block:
 
 ```json
 {
-  "type": "block",
-  "txids": [],
-  "nonce": "5a22386cd6aa170fa1717af1d4b2397ef86317e53991693356f2102591893569",
+  "T": "00000002af000000000000000000000000000000000000000000000000000000",
+  "created": 1624219079,
+  "miner": "dionyziz",
+  "nonce": "0000000000000000000000000000000000000000000000000000002634878840",
+  "note": "The Economist 2021-06-20: Crypto-miners are probably to blame for the graphics-chip shortage",
   "previd": null,
-  "created": "1622826460",
-  "T": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
-  "miner": "dionyziz"
+  "txids": [],
+  "type": "block"
 }
 ```
 
 All valid chains must extend genesis. Each block must have a timestamp which is later than its
 predecessor.
 
-The `nonce` value for this block is the SHA256 hash of the following string:
-
-> The Guardian Science 4 Jun 2021: SpaceX rocket heads to ISS with squid, toothpaste and avocados
-
 The `txids` in a block may contain one coinbase transaction. This transaction must be the first in the
 txids. That transaction has no inputs. It has exactly one output which generates 50 * 10^9 new coins.
 
-All non-genesis blocks must have a target `T` of `00000002af0000000000000000000000000000000000000000000000000000000`.
-The genesis blockid is `cb7226628bcedbd913bdfa5311fc07d17cde2697dda5d24ea75a2a60646ff317`. Check this
+All blocks must have a target `T` of `00000002af000000000000000000000000000000000000000000000000000000`.
+The genesis blockid is `00000000a420b7cefa2b7730243316921ed59ffe836e111ca3801f82a4f5360e`. Check this
 to ensure your implementation is performing correct JSON canonicalization.
 
 # Messages
@@ -179,8 +176,8 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.4.0`. If the version you receive differs
-from `0.4.x` you must disconnect. The message can also contain an `agent` key, with a string description
+must also contain a `version` key, which is always set to `0.5.0`. If the version you receive differs
+from `0.5.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
 You must exchange a hello message both ways before you exchange any
@@ -190,7 +187,7 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "agent": "Marabu-Core Client 0.7"
 }
 ```
