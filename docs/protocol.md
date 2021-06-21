@@ -118,8 +118,7 @@ If the transaction is a coinbase transaction, then it will not contain an `input
 This represents a block and has the type "block". It contains the key `txids`, which is a list of the txids within
 the block, a `nonce` which is a 32-byte hexified value, a `previd` which is the blockid of the previous block in
 the chain, a `created` which is an (integer) UNIX timestamp in seconds, and a `T` which is a 32-byte hexadecimal integer
-and is the mining target. Optionally it can contain a `miner` field, which can be any ASCII-printable string up to 32
-characters long.
+and is the mining target. Optionally it can contain a `miner` field and a `note` field, which can be any ASCII-printable strings up to 128 characters long each.
 
 ```json
 {
@@ -131,7 +130,8 @@ characters long.
   "previd": "0024839ec9632d382486ba7aac7e0bda3b4bda1d4bd79be9ae78e7e1e813ddd8",
   "created": "1622825642",
   "T": "003a000000000000000000000000000000000000000000000000000000000000",
-  "miner": "dionyziz"
+  "miner": "dionyziz",
+  "note": "A sample block"
 }
 ```
 
