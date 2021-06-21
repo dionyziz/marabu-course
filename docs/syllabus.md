@@ -47,14 +47,17 @@
   - Connectedness and message delivery
   - The non-eclipsing assumption
   - The gossip protocol
-- Exercises 0 and 1
+- **Exercises 0 and 1**
 
 ## Lesson 2: The Application Layer - UTXO
-- A transaction
+- Commitment schemes
+- The binding and hiding games
+- Hashes
+- The collision resistance and pre-image resistance games
 - Public and private keys
 - Signatures, signing, verifying, correctness, security
-- p2pk / p2pkh
-- Hashing a public key
+- The existential unforgeability game
+- A transaction
 - Addresses
 - One input and one output
 - Amounts
@@ -64,14 +67,14 @@
 - Conservation Law
 - Change
 - Outpoints -- the transaction graph
-- A look at the bitcoin transaction graph
 - The transaction ledger / transaction serialization
 - UTXO as application state
 - The evolution of the UTXO
 - What money do I own? Calculating balances
-- The UTXO as a state machine α with transaction transitions δ
 - Double spending
-- Exercise 2 and 3
+- **Reading**: Chapter 5 introduction and section 5.1 from Modern Cryptography (2nd ed.)
+- **Reading**: Chapter 12 introduction (skip comparison to MACs and relation to encryption) and sections 12.1, 12.2, 12.3 from Modern Cryptography (2nd ed.)
+- **Exercises 2 and 3**
 
 ## Lesson 3: Blocks and chains
 - The decentralized setting; the network
@@ -84,31 +87,46 @@
 - Proof-of-work as a consensus mechanism without blocks
 - The block
 - The chain
-- Temporary forks
+- The longest chain rule
+- The mempool
+- Temporary forks / reorgs
 - Coming to an agreement: Blockchain convergence
-- Exercise 4, 5, 6
+- The Chain Growth, Common Prefix, and Chain Quality, intuitively
+- Maintaining the UTXO under reorgs
+- **Exercises 4 and 5**
 
 ## Lesson 4: Blockchain Economics
 - The weak conservation law
 - Fees
+- The coinbase transaction, the inductive base of the UTXO graph
 - The money supply
 - Supply adjustment
-- Exercise 7
+- Read Satoshi's Bitcoin paper
+- **Exercises 6 and 7**
 
 ## Lesson 5: Mining and Wallets
 - Mining hardware: CPUs, GPUs, ASICs
 - Mining pools
+- GetWork / the mining template
 - The pooled mining protocol: light blocks
 - The cost of mining: Empty blocks, optimistic mining
-- Fast miners
 - Online and offline wallets
 - Wallet seeds
 - Hardware wallets, brain wallets
+- **Exercise 8**
 
 ## Lesson 6: The Application Layer - Accounts
+- p2pk / p2pkh and quantum security
+- Hashing a public key
+- The transaction as a state machine transition
+- The UTXO as a state machine α with transaction transitions δ
 - A transaction
 - Balances
 - Replaybility and nonces
+- The account balances as a state machine α with transaction transitions δ
+- Practical transactions in Bitcoin and Ethereum
+- Look at the Bitcoin and Ethereum transaction graph
+- **Exercise 9**
 
 ## Lesson 7: Smart contracts
 - Motivation: Payment conditions and covenants
@@ -118,9 +136,7 @@
 - Turing completeness and gas
 - Contract and personal transactions
 - The smart contract transaction format
-- The Merkle-Patricia trie
 - Smart contract state as a state machine
-- Exercise 8
 
 ## Lesson 8: Light verification
 - Merkle trees
@@ -128,8 +144,12 @@
 - Merkle security definition and proof
 - The SPV protocol
 - Light clients
-- Block state commitment
-- Exercises 8, 9
+- Authenticated data structures
+- Sparse Merkle trees: Polynomial data in an exponential sea
+- The Merkle-Patricia trie
+- Block state commitment: UTXO commitment or account balances commitment
+- Light mining
+- **Exercises 10**
 
 ## Lesson 9: Superlight verification
 - The non-interactive prover/verifier model
@@ -140,27 +160,38 @@
 
 ## Lesson 10: Solidity overview
 - Contracts, methods
-- Variables, data types, storage location
+- Flow control, loops, conditions
+- Variables, simple and complex data types, storage locations
 - Payable methods
 - Reverting, exceptions
-
-## Lesson 11: Coding in Solidity
+- Gas costs of operations
 - ERC-20 tokens and ICOs
 - ERC-721 tokens and NFTs
+- **Exercise 11**
+
+## Lesson 11: Coding in Solidity
+- Reentrancy
+- Auctions
 - Front-running
+- Naming services, ENS
+- Commit/reveal schemes
 - Randomness
-- Exercise 10
+- Events
+- The receipts tree
+- **Exercise 12**
 
 ## Lesson 12: Blockchain Governance
 - Soft forks
 - Hard forks
 - Velvet forks
+- TheDAO hack, Ethereum and Ethereum Classic
+- **Exercise 13**
 
 ## Lesson 13: Variable difficulty
 - Epochs, the m parameter
 - Target recalculation and difficulty adjustment
 - Difficulty clamping, the τ parameter
-- Exercise 11
+- **Exercise 14**
 
 ## Lesson 14: Consensus in earnest
 - The backbone model in the static difficulty setting
@@ -179,17 +210,21 @@
 - Ledger safety
 - Liveness from growth and quality
 - Safety from common prefix
+- **Reading**: Section 5.5 from Modern Cryptography (2nd ed.)
+- **Reading**: Pages 1-19 of the [Backbone paper](https://eprint.iacr.org/2014/765.pdf)
 
 ## Lesson 15: Blockchains are secure
 - The honest majority assumption
 - Successful rounds and uniquely successful rounds
 - The probabilistic treatment using the random variables X, Y, and Z
 - Probabilities of success and failure
+- Chernoff bounds
 - The world is a good place: Typical executions
 - Convergence opportunities
 - A proof of the Chain Growth property
 - A proof of the Common Prefix property
 - A proof of the Chain Quality property
+- **Reading**: Pages 19-25 of the [Backbone paper](https://eprint.iacr.org/2014/765.pdf)
 
 ## Lesson 16: Proof of stake
 - The proof-of-work environmental impact

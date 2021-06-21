@@ -55,6 +55,7 @@ In this exercise, you will implement transaction generation and validation for y
 - The public keys must be in the correct format.
 - Transactions must respect the law of conservation.
 - Private keys can sign transaction inputs pointing to their public key.
+- When you receive a transaction object from the network, validate it before gossiping it.
 
 # Exercise 4
 
@@ -69,16 +70,47 @@ In this exercise, you will implement block validation in your Marabu node.
 
 - Create the logic to represent a block.
 - Check the proof-of-work.
+- Ensure the target is the one required.
 - Check that all contained transactions are valid.
+- Check for coinbase transactions.
+- When you receive a block object from the network, validate it before gossiping it.
 
 # Exercise 6
 
-In this exercise, you will implement your own miner for your Marabu node.
+In this exercise, you will implement chain validation in your Marabu node.
 
-- Create the logic to build a block.
-- Mine on the candidate block to discover proof-of-work.
+- Implement the longest chain rule.
+- Ensure the first block in the chain is genesis.
+- Ensure timestamps are increasing.
+- Implement getchaintip/chaintip.
+- Use getchaintip to inquire others about their chains.
+- Download chains recursively from tip to genesis.
 
 # Exercise 7
+
+In this exercise, you will maintain a mempool of transactions in your Marabu node.
+
+- Listen for transactions as they are gossiped on the network.
+- Keep track of which transactions have been confirmed and which one have not.
+- Maintain a mempool of unconfirmed transactions.
+- Implement mempool/getmempool.
+- Maintain a UTXO.
+- Update your UTXO as blocks and transactions arrive.
+- Modify your chain validation to ensure transactions do not double spent.
+- Update your UTXO when your mempool does not match a newly mined block.
+- Deal with UTXO updates when the chain reorgs.
+
+# Exercise 8
+
+In this exercise, you will implement your own miner for your Marabu node.
+
+- Collect transactions in your mempool into a block.
+- Create the logic to build a block template.
+- Mine on the candidate block to discover proof-of-work.
+- Benchmark and optimize your miner. What hashrate can you achieve?
+- Broadcast your newly discovered block when it is found.
+
+# Exercise 9
 
 In this exercise, you will try to attack your peers. Look at the source code
 of the implementations of three of your fellow students.
@@ -89,15 +121,11 @@ of the implementations of three of your fellow students.
 You can perform network-level attacks, denial of service attacks, or attack
 their transaction and block validation.
 
-# Exercise 8
+# Exercise 10
 
 Solve the "Constructing a Merkle Tree" assignment on [blockchain-course.org](https://blockchain-course.org/assignment).
 
-# Exercise 9
-
-Implement SPV verification for your Marabu node. Participate in the hard fork.
-
-# Exercise 10
+# Exercise 11
 
 Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
 
@@ -105,11 +133,21 @@ Solve the following [blockchain-course.org](https://blockchain-course.org/assign
 - "Simple storage smart contract"
 - "Faucet smart contract"
 - "ERC-20 token"
+
+# Exercise 12
+
+Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
+
 - "Dutch Auction Implementation"
 - "Name Service"
 - "Vickrey Auction Implementation"
 - "Game of Thrones"
 
-# Exercise 11
+# Exercise 13
+
+Implement SPV verification for your Marabu node. Participate in the hard fork.
+
+
+# Exercise 14
 
 Difficulty adjustment. Participate in the hard fork.
