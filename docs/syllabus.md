@@ -1,4 +1,7 @@
 ## Lesson 1: The Problem / The Setting / Motivation
+
+**2021-06-12**
+
 - Administrivia
   - Course outline
   - 56 hours total
@@ -50,6 +53,9 @@
 - **Exercises 0 and 1**
 
 ## Lesson 2: The Application Layer - UTXO
+
+**2021-06-17**
+
 - Commitment schemes
 - The binding and hiding games
 - Hashes
@@ -77,6 +83,9 @@
 - **Exercises 2 and 3**
 
 ## Lesson 3: Blocks and chains
+
+**2021-06-22**
+
 - The decentralized setting; the network
 - Adversarial and honest nodes, corruption, sybil attacks
 - Network delays, message delivery
@@ -96,6 +105,9 @@
 - **Exercises 4 and 5**
 
 ## Lesson 4: Blockchain Economics
+
+**2021-06-28**
+
 - The weak conservation law
 - Fees
 - The coinbase transaction, the inductive base of the UTXO graph

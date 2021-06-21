@@ -8,6 +8,8 @@ Some exercises divert from the main node development and are simple independent 
 
 # Exercise 0
 
+**Due 2021-06-17**
+
 Start coding the implementation of your Marabu node.
 In this exercise, you will set up your repository and exchange a 'hello' message
 with any peer connecting to you.
@@ -21,6 +23,8 @@ with any peer connecting to you.
 
 # Exercise 1
 
+**Due 2021-06-17**
+
 In this exercise, you will extend your Marabu node so that it can exchange
 messages and perform peer discovery.
 
@@ -31,6 +35,8 @@ messages and perform peer discovery.
 
 # Exercise 2
 
+**Due 2021-06-22**
+
 In this exercise, you will extend your Marabu node to implement content addressable object exchange and gossiping.
 
 - Maintain a local database of known objects.
@@ -40,6 +46,8 @@ In this exercise, you will extend your Marabu node to implement content addressa
 - Implement gossiping. Broadcast the knowledge of newly received objects to your peers.
 
 # Exercise 3
+
+**Due 2021-07-02**
 
 In this exercise, you will implement transaction generation and validation for your Marabu node.
 
