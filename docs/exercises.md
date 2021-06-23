@@ -69,12 +69,16 @@ Don't worry about maintaining a perfect UTXO set just yet. We'll focus on this i
 
 # Exercise 4
 
+**Due 2021-07-09**
+
 Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
 
 - "Breaking SHA256"
 - "Performing proof-of-work"
 
 # Exercise 5
+
+**Due 2021-07-09**
 
 In this exercise, you will implement block validation in your Marabu node.
 
@@ -87,6 +91,8 @@ In this exercise, you will implement block validation in your Marabu node.
 
 # Exercise 6
 
+**Due 2021-07-09**
+
 In this exercise, you will implement chain validation in your Marabu node.
 
 - Implement the longest chain rule.
@@ -95,8 +101,11 @@ In this exercise, you will implement chain validation in your Marabu node.
 - Implement getchaintip/chaintip.
 - Use getchaintip to inquire others about their chains.
 - Download chains recursively from tip to genesis.
+- Handle the coinbase transaction.
 
 # Exercise 7
+
+**Due 2021-07-16**
 
 In this exercise, you will maintain a mempool of transactions in your Marabu node.
 
@@ -112,6 +121,8 @@ In this exercise, you will maintain a mempool of transactions in your Marabu nod
 
 # Exercise 8
 
+**Due 2021-07-16**
+
 In this exercise, you will implement your own miner for your Marabu node.
 
 - Collect transactions in your mempool into a block.
@@ -121,6 +132,8 @@ In this exercise, you will implement your own miner for your Marabu node.
 - Broadcast your newly discovered block when it is found.
 
 # Exercise 9
+
+**Due 2021-07-23**
 
 In this exercise, you will try to attack your peers. Look at the source code
 of the implementations of three of your fellow students.
@@ -133,9 +146,13 @@ their transaction and block validation.
 
 # Exercise 10
 
+**Due 2021-07-30**
+
 Solve the "Constructing a Merkle Tree" assignment on [blockchain-course.org](https://blockchain-course.org/assignment).
 
 # Exercise 11
+
+**Due 2021-08-06**
 
 Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
 
@@ -146,6 +163,8 @@ Solve the following [blockchain-course.org](https://blockchain-course.org/assign
 
 # Exercise 12
 
+**Due 2021-08-06**
+
 Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
 
 - "Dutch Auction Implementation"
@@ -155,9 +174,13 @@ Solve the following [blockchain-course.org](https://blockchain-course.org/assign
 
 # Exercise 13
 
+**Due 2021-08-13**
+
 Implement SPV verification for your Marabu node. Participate in the hard fork.
 
 
 # Exercise 14
+
+**Due 2021-08-20**
 
 Difficulty adjustment. Participate in the hard fork.
