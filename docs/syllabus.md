@@ -119,6 +119,9 @@
 - **Exercises 6 and 7**
 
 ## Lesson 5: Mining and Wallets
+
+**2021-06-28**
+
 - Mining hardware: CPUs, GPUs, ASICs
 - Mining pools
 - GetWork / the mining template
@@ -130,6 +133,9 @@
 - **Exercise 8**
 
 ## Lesson 6: The Application Layer - Accounts
+
+**2021-07-05**
+
 - p2pk / p2pkh and quantum security
 - Hashing a public key
 - The transaction as a state machine transition
@@ -143,6 +149,9 @@
 - **Exercise 9**
 
 ## Lesson 7: Smart contracts
+
+**2021-07-08**
+
 - Motivation: Payment conditions and covenants
 - Smart contracts in the UTXO model
 - Bitcoin scripts
