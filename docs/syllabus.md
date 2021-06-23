@@ -1,4 +1,4 @@
-## Lesson 1: The Problem / The Setting / Motivation
+## Lesson 1: The Setting
 
 **2021-06-12**
 
@@ -100,6 +100,8 @@
 - The mempool
 - Temporary forks / reorgs
 - Coming to an agreement: Blockchain convergence
+- The genesis block; the arrow of time
+- Verifying chains
 - The Chain Growth, Common Prefix, and Chain Quality, intuitively
 - Maintaining the UTXO under reorgs
 - **Exercises 4 and 5**
