@@ -65,6 +65,8 @@ In this exercise, you will implement transaction generation and validation for y
 - Private keys can sign transaction inputs pointing to their public key.
 - When you receive a transaction object from the network, validate it before gossiping it.
 
+Don't worry about maintaining a perfect UTXO set just yet. We'll focus on this in Exercise 7.
+
 # Exercise 4
 
 Solve the following [blockchain-course.org](https://blockchain-course.org/assignment) exercises:
