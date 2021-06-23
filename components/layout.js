@@ -14,11 +14,15 @@ export default function Layout({ children }) {
     <header className={styles.header}>
       <div>
         <div>
-          <img src={birdPic} alt='Blue Bird' width='50' height='50' />
+          <Link href='/'><a>
+            <img src={birdPic} alt='Blue Bird' width='50' height='50' />
+          </a></Link>
         </div>
 
         <div>
-          <Heading size='md'>Blockchain Foundations</Heading>
+          <Link href='/'><a>
+            <Heading size='md'>Blockchain Foundations</Heading>
+          </a></Link>
         </div>
       </div>
 
