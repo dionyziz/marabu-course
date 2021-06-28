@@ -114,9 +114,6 @@
 **2021-06-28**
 
 - Probability of obtaining a block; the value p
-- Attacks of a minority miner
-  - The Selfish Mining attack
-  - Selfish Mining simulation and bounds for 1/3 and 1/2 adversaries
 - Attacks of a majority miner
   - Censoring transactions
   - Double spending
@@ -129,6 +126,9 @@
 - Balancing the values T and k
   - Loss of security due to small k and small T: variance attacks
   - Loss of security due to large k and large T: fan-out attacks
+- Attacks of a minority miner
+  - The Selfish Mining attack
+  - Selfish Mining simulation and bounds for 1/3 and 1/2 adversaries
 - The weak conservation law
 - Fees
 - The coinbase transaction, the inductive base of the UTXO graph
