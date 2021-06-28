@@ -109,7 +109,7 @@
 - Maintaining the UTXO under reorgs
 - **Exercises 4 and 5**
 
-## Lesson 4: Blockchain Economics
+## Lesson 4: Blockchain Economics and Attacks
 
 **2021-06-28**
 
