@@ -94,6 +94,7 @@
 - The double spending attack
 - Simple ideas don't work: Serializing transactions naively, the critical time Δ
 - Proof-of-work as a consensus mechanism without blocks
+- The proof-of-work equation; the parameters T and κ
 - The block
 - The chain
 - The longest chain rule
@@ -103,6 +104,8 @@
 - The genesis block; the arrow of time
 - Verifying chains
 - The Chain Growth, Common Prefix, and Chain Quality, intuitively
+- Transaction confirmation rules; the Common Prefix parameter k
+- The minority double spending attack and its inevitable failure; negligibility in k
 - Maintaining the UTXO under reorgs
 - **Exercises 4 and 5**
 
@@ -110,11 +113,39 @@
 
 **2021-06-28**
 
+- Probability of obtaining a block; the value p
+- Attacks of a minority miner
+  - The Selfish Mining attack
+  - Selfish Mining simulation and bounds for 1/3 and 1/2 adversaries
+- Attacks of a majority miner
+  - Censoring transactions
+  - Double spending
+  - The impossibility of spending others' money
+  - The impossibility of breaking chain growth
+- Healing from temporary dishonest majority
+  - Healing from censorship
+  - Temporarily rejecting payments: resilience to double spending attacks
+- The expected block generation time η
+- Balancing the values T and k
+  - Loss of security due to small k and small T: variance attacks
+  - Loss of security due to large k and large T: fan-out attacks
 - The weak conservation law
 - Fees
 - The coinbase transaction, the inductive base of the UTXO graph
 - The money supply
-- Supply adjustment
+- Supply adjustment in Bitcoin - halving
+- The limited total money supply of Bitcoin
+- Supply adjustment in Monero - smooth emission
+- Empty blocks
+- Rational miners, miner incentivisation
+- The block size limit
+- Collecting transactions into blocks, the knapsack algorithm
+- Mining pools
+- The pooled mining protocol
+  - Why pools? The variance problem
+  - Decreasing variance while keeping expectation the same
+  - Centralized pools and pool operators
+  - Light blocks (shares) and the light PoW equation
 - Read Satoshi's Bitcoin paper
 - **Exercises 6 and 7**
 
@@ -123,9 +154,7 @@
 **2021-06-28**
 
 - Mining hardware: CPUs, GPUs, ASICs
-- Mining pools
 - GetWork / the mining template
-- The pooled mining protocol: light blocks
 - The cost of mining: Empty blocks, optimistic mining
 - Online and offline wallets
 - Wallet seeds
@@ -223,7 +252,7 @@
 - Synchronous time: The integer round
 - The rushing adversary network model
 - The Random Oracle model
-- The parameters n, t, q, p
+- The parameters n, t, q
 - The backbone protocol
 - Mining
 - The Chain Growth property
