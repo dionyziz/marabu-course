@@ -133,7 +133,7 @@ and is the mining target. Optionally it can contain a `miner` field and a `note`
   ],
   "nonce": "a26d92800cf58e88a5ecf37156c031a4147c2128beeaf1cca2785c93242a4c8b",
   "previd": "0024839ec9632d382486ba7aac7e0bda3b4bda1d4bd79be9ae78e7e1e813ddd8",
-  "created": "1622825642",
+  "created": 1622825642,
   "T": "003a000000000000000000000000000000000000000000000000000000000000",
   "miner": "dionyziz",
   "note": "A sample block"
@@ -159,7 +159,7 @@ The genesis block has a null `previd`. This is our genesis block:
 ```
 
 All valid chains must extend genesis. Each block must have a timestamp which is later than its
-predecessor.
+predecessor but not after the current time.
 
 The `txids` in a block may contain one coinbase transaction. This transaction must be the first in the
 txids. That transaction has no inputs. It has exactly one output which generates 50 * 10^12 new picabus
