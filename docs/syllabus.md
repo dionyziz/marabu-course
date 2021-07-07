@@ -94,6 +94,7 @@
 - The double spending attack
 - Simple ideas don't work: Serializing transactions naively, the critical time Δ
 - Proof-of-work as a consensus mechanism without blocks
+- The honest computational majority assumption
 - The proof-of-work equation; the parameters T and κ
 - The block
 - The chain
@@ -140,18 +141,19 @@
 - Rational miners, miner incentivisation
 - The block size limit
 - Collecting transactions into blocks, the knapsack algorithm
+- A look at Bitcoin's blockchain explorer blocks and transactions
 - Mining pools
 - The pooled mining protocol
   - Why pools? The variance problem
   - Decreasing variance while keeping expectation the same
   - Centralized pools and pool operators
   - Light blocks (shares) and the light PoW equation
-- Read Satoshi's Bitcoin paper
+- **Reading**: Satoshi's Bitcoin paper
 - **Exercises 6 and 7**
 
 ## Lesson 5: Mining and Wallets
 
-**2021-06-28**
+**2021-07-02**
 
 - Mining hardware: CPUs, GPUs, ASICs
 - GetWork / the mining template
@@ -163,54 +165,106 @@
 
 ## Lesson 6: The Application Layer - Accounts
 
-**2021-07-05**
+**2021-07-02**
 
+- Maintaining your own UTXOs for spending
+- Optimizing for fees: Wallet UTXO selection policy
 - p2pk / p2pkh and quantum security
 - Hashing a public key
 - The transaction as a state machine transition
 - The UTXO as a state machine α with transaction transitions δ
-- A transaction
-- Balances
+- Account states: Balances
+- A transaction in accounts
 - Replaybility and nonces
 - The account balances as a state machine α with transaction transitions δ
 - Practical transactions in Bitcoin and Ethereum
 - Look at the Bitcoin and Ethereum transaction graph
-- **Exercise 9**
-
-## Lesson 7: Smart contracts
-
-**2021-07-08**
-
 - Motivation: Payment conditions and covenants
 - Smart contracts in the UTXO model
 - Bitcoin scripts
+- **Exercise 9**
+
+## Lesson 7: Light verification
+
+**2021-07-05**
+
+- The Random Oracle model
+- Random Oracles are collision resistant
+- Random Oracle collision resistance security proof
+- Random Oracles are pre-image resistant
+- Random Oracle pre-image resistance security proof
+- Block predictions are difficult in the Random Oracle model
+- Authenticated data structures
+- Merkle trees
+- Building a complete Merkle tree from data
+- Building a Merkle tree proof
+- Validating a Merkle tree proof
+- Merkle trees in the torrent protocol
+- Merkle tree game-based security definition
+- Merkle tree security theorem and proof
+- The SPV protocol
+- Light clients
+- Sparse Merkle trees, Merkle-Patricia tries: Polynomial data in an exponential sea
+- **Reading**: Section 5.5 from Modern Cryptography (2nd ed.)
+- **Exercise 10**
+
+## Lesson 8: Consensus in earnest
+
+**2021-07-07**
+
+- The backbone model in the static difficulty setting
+- Interactive Turing machines
+- The environment
+- Synchronous time: The integer round
+- The theoretical network model
+- The rushing adversary
+- The Sybil adversary
+- The parties: The parameters n, t
+- The honest majority assumption: The parameter δ
+- Mining modeled as a Random Oracle: The parameter q
+- The backbone protocol
+- Validating blocks
+- The longest chain rule
+- Mining
+- The Chain Growth property: The parameters s and τ
+- The Common Prefix property: The parameter k
+- The Chain Quality property: The parameters ℓ and μ
+- Ledger liveness: The parameter u
+- Ledger safety
+- Proof of liveness from Chain Growth and Chain Quality
+- Calculation of the liveness parameter u
+- Proof of safety from Common Prefix
+- Successful rounds and uniquely successful rounds
+- The probabilistic treatment using the random variables X, Y, and Z
+- Probabilities of success and failure
+- Chernoff bound intuition
+- Chernoff bound theorem for binomial distributions: The parameter ε
+- Convergence opportunities
+- Uniquely successful rounds avoid fan-out attacks unless matched by adversarial mining power
+- **Reading**: Pages 1-19 of the [Backbone paper](https://eprint.iacr.org/2014/765.pdf)
+
+## Lesson 9: Blockchains are secure
+
+**2021-07-09**
+
+- The equal computational split model
+- The world is a good place: Typical executions
+- A proof of the Chain Growth property
+- A proof of the Common Prefix property
+- A proof of the Chain Quality property
+- **Reading**: Pages 19-25 of the [Backbone paper](https://eprint.iacr.org/2014/765.pdf)
+
+## Lesson 10: Smart contracts
+
+**2021-07-05**
+
 - Smart contracts in the accounts model
 - Turing completeness and gas
 - Contract and personal transactions
 - The smart contract transaction format
 - Smart contract state as a state machine
 
-## Lesson 8: Light verification
-- Merkle trees
-- Construction of a Merkle tree, construction of a proof
-- Merkle security definition and proof
-- The SPV protocol
-- Light clients
-- Authenticated data structures
-- Sparse Merkle trees: Polynomial data in an exponential sea
-- The Merkle-Patricia trie
-- Block state commitment: UTXO commitment or account balances commitment
-- Light mining
-- **Exercises 10**
-
-## Lesson 9: Superlight verification
-- The non-interactive prover/verifier model
-- The polylog verifier
-- Superblocks
-- The NIPoPoW protocol
-- Superlight mining
-
-## Lesson 10: Solidity overview
+## Lesson 11: Solidity overview
 - Contracts, methods
 - Flow control, loops, conditions
 - Variables, simple and complex data types, storage locations
@@ -221,7 +275,7 @@
 - ERC-721 tokens and NFTs
 - **Exercise 11**
 
-## Lesson 11: Coding in Solidity
+## Lesson 12: Coding in Solidity
 - Reentrancy
 - Auctions
 - Front-running
@@ -230,56 +284,38 @@
 - Randomness
 - Events
 - The receipts tree
+- Decentralized mining pools
 - **Exercise 12**
 
-## Lesson 12: Blockchain Governance
+## Lesson 13: Superlight verification
+- Block state commitment: UTXO commitment or account balances commitment
+- Light mining
+- The non-interactive prover/verifier model
+- The polylog verifier
+- Superblocks
+- The NIPoPoW protocol
+- Superlight mining
+
+## Lesson 14: Blockchain Governance
 - Soft forks
 - Hard forks
 - Velvet forks
 - TheDAO hack, Ethereum and Ethereum Classic
 - **Exercise 13**
 
-## Lesson 13: Variable difficulty
+## Lesson 15: Variable difficulty
 - Epochs, the m parameter
 - Target recalculation and difficulty adjustment
 - Difficulty clamping, the τ parameter
 - **Exercise 14**
 
-## Lesson 14: Consensus in earnest
-- The backbone model in the static difficulty setting
-- Interactive Turing machines
-- The environment
-- Synchronous time: The integer round
-- The rushing adversary network model
-- The Random Oracle model
-- The parameters n, t, q
-- The backbone protocol
-- Mining
-- The Chain Growth property
-- The Common Prefix property
-- The Chain Quality property
-- Ledger liveness
-- Ledger safety
-- Liveness from growth and quality
-- Safety from common prefix
-- **Reading**: Section 5.5 from Modern Cryptography (2nd ed.)
-- **Reading**: Pages 1-19 of the [Backbone paper](https://eprint.iacr.org/2014/765.pdf)
-
-## Lesson 15: Blockchains are secure
-- The honest majority assumption
-- Successful rounds and uniquely successful rounds
-- The probabilistic treatment using the random variables X, Y, and Z
-- Probabilities of success and failure
-- Chernoff bounds
-- The world is a good place: Typical executions
-- Convergence opportunities
-- A proof of the Chain Growth property
-- A proof of the Common Prefix property
-- A proof of the Chain Quality property
-- **Reading**: Pages 19-25 of the [Backbone paper](https://eprint.iacr.org/2014/765.pdf)
-
 ## Lesson 16: Proof of stake
 - The proof-of-work environmental impact
+- The honest stake assumption
+- Grinding attacks
 - Proof-of-stake time: The slot
 - Epoch randomness
+- Slot leaders
 - Verifiable random functions
+- The Ouroboros protocol
+- The Ouroboros Praos protocols
