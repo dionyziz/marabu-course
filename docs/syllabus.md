@@ -148,7 +148,8 @@
   - Decreasing variance while keeping expectation the same
   - Centralized pools and pool operators
   - Light blocks (shares) and the light PoW equation
-- **Reading**: Satoshi's Bitcoin paper
+- **Reading**: [Satoshi's Bitcoin paper](https://bitcoin.org/bitcoin.pdf)
+- **Optional Reading**: [Selfish Mining paper](https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf)
 - **Exercises 6 and 7**
 
 ## Lesson 5: Mining and Wallets
@@ -161,6 +162,7 @@
 - Online and offline wallets
 - Wallet seeds
 - Hardware wallets, brain wallets
+- **Optional Reading**: [Bitcoin Brain Drain](https://jbonneau.com/doc/VBCKM16-FC-bitcoin_brain_wallets.pdf)
 - **Exercise 8**
 
 ## Lesson 6: The Application Layer - Accounts
@@ -256,7 +258,7 @@
 
 ## Lesson 10: Smart contracts
 
-**2021-07-05**
+**2021-07-15**
 
 - Smart contracts in the accounts model
 - Turing completeness and gas
