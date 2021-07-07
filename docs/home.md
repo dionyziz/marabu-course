@@ -38,7 +38,7 @@ The following implementations are solutions to the exercises. If you want to mak
 * [birdman](https://github.com/k4m4/birdman), a Marabu node in TypeScript by Nikolaos Kamarinakis
 * [penguin](https://github.com/dimkarakostas/penguin), a Marabu node in Python by Dimitris Karakostas
 * [go-marabu](https://gogs.decrypto.org/gtklocker/go-marabu), a Marabu node in Go by Kostis Karantias
-* [marabou](https://github.com/pkakelas/marabou-client), a Marabu node in Go by Dimitris Lamprinos
+* [marabou](https://github.com/pkakelas/marabou), a Marabu node in Typescript by Dimitris Lamprinos
 * [calabu](https://github.com/tzinas/calabu), a Marabu node in JavaScript by Apostolos Tzinas
 * [malibu](https://github.com/dionyziz/marabu), a Marabu node in TypeScript by Dionysis Zindros (a bootstrapping node is running on keftes.di.uoa.gr:18018)
 
