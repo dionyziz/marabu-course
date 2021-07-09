@@ -251,9 +251,17 @@
 
 - The equal computational split model
 - The world is a good place: Typical executions
-- A proof of the Chain Growth property
+- The distance between X and Y: The block production parameter f
+- The distance between Y and Z: The Chernoff error parameter ε
+- The Chernoff waiting time λ
+- The balancing equation 3ε + 3f < δ
+- Calculating the relationship between adversarial power (n, t), network diameter, and block production rate
+- The Typicality Theorem
+- The Chain Growth Lemma
+- A proof of the Chain Growth property, calculation of the parameters s=λ and τ=(1 - ε)f
+- The Chain Slowness Lemma
+- The Pairing Lemma
 - A proof of the Common Prefix property
-- A proof of the Chain Quality property
 - **Reading**: Pages 19-25 of the [Backbone paper](https://eprint.iacr.org/2014/765.pdf)
 
 ## Lesson 10: Smart contracts
