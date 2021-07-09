@@ -78,8 +78,8 @@
 - The evolution of the UTXO
 - What money do I own? Calculating balances
 - Double spending
-- **Reading**: Chapter 5 introduction and section 5.1 from Modern Cryptography (2nd ed.)
-- **Reading**: Chapter 12 introduction (skip comparison to MACs and relation to encryption) and sections 12.1, 12.2, 12.3 from Modern Cryptography (2nd ed.)
+- **Reading**: Chapter 5 introduction and section 5.1 from [Modern Cryptography](https://eclass.uniwa.gr/modules/document/file.php/CSCYB105/Reading%20Material/%5BJonathan_Katz%2C_Yehuda_Lindell%5D_Introduction_to_Mo%282nd%29.pdf) (2nd ed.)
+- **Reading**: Chapter 12 introduction (skip comparison to MACs and relation to encryption) and sections 12.1, 12.2, 12.3 from [Modern Cryptography](https://eclass.uniwa.gr/modules/document/file.php/CSCYB105/Reading%20Material/%5BJonathan_Katz%2C_Yehuda_Lindell%5D_Introduction_to_Mo%282nd%29.pdf) (2nd ed.)
 - **Exercises 2 and 3**
 
 ## Lesson 3: Blocks and chains
@@ -148,7 +148,7 @@
   - Decreasing variance while keeping expectation the same
   - Centralized pools and pool operators
   - Light blocks (shares) and the light PoW equation
-- **Reading**: [Satoshi's Bitcoin paper](https://bitcoin.org/bitcoin.pdf)
+- **Reading**: [Satoshi's Bitcoin paper](https://www.debr.io/article/21260.pdf)
 - **Optional Reading**: [Selfish Mining paper](https://www.cs.cornell.edu/~ie53/publications/btcProcFC.pdf)
 - **Exercises 6 and 7**
 
@@ -207,7 +207,7 @@
 - The SPV protocol
 - Light clients
 - Sparse Merkle trees, Merkle-Patricia tries: Polynomial data in an exponential sea
-- **Reading**: Section 5.5 from Modern Cryptography (2nd ed.)
+- **Reading**: Section 5.5 from [Modern Cryptography](https://eclass.uniwa.gr/modules/document/file.php/CSCYB105/Reading%20Material/%5BJonathan_Katz%2C_Yehuda_Lindell%5D_Introduction_to_Mo%282nd%29.pdf) (2nd ed.)
 - **Exercise 10**
 
 ## Lesson 8: Consensus in earnest
