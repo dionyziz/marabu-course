@@ -254,7 +254,7 @@
 - The distance between X and Y: The block production parameter f
 - The distance between Y and Z: The Chernoff error parameter ε
 - The Chernoff waiting time λ
-- The balancing equation 3ε + 3f < δ
+- The balancing equation 3ε + 3f < δ, setting ε = f = δ / 3
 - Calculating the relationship between adversarial power (n, t), network diameter, and block production rate
 - The Typicality Theorem
 - The Chain Growth Lemma
@@ -269,12 +269,32 @@
 **2021-07-15**
 
 - Smart contracts in the accounts model
-- Turing completeness and gas
-- Contract and personal transactions
+- Turing completeness, quasi turing completeness
+- Gas, gas price, starting gas
+- Contract and personal accounts
+- Value transfers between personal accounts
 - The smart contract transaction format
+- Transaction initiation
+- Message passing between contracts
 - Smart contract state as a state machine
+- State commitment in block headers
+- Nested Merkle tries
+- Receipts
+- Light mining using block state commitments
+- The Ethereum Virtual Machine
+- Contracts, methods
+- The ABI
+- Contract execution must be deterministic and isolated
+- An attack against Common Prefix in a minority-adversary non-deterministic contract world
+- Oracles
+- A flight insurance contract
+- Validating an HTTPS response from a contract
 
 ## Lesson 11: Solidity overview
+
+**2021-07-22**
+
+- Solidity grammar and syntax
 - Contracts, methods
 - Flow control, loops, conditions
 - Variables, simple and complex data types, storage locations
@@ -298,8 +318,6 @@
 - **Exercise 12**
 
 ## Lesson 13: Superlight verification
-- Block state commitment: UTXO commitment or account balances commitment
-- Light mining
 - The non-interactive prover/verifier model
 - The polylog verifier
 - Superblocks
