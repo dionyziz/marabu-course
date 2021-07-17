@@ -31,6 +31,7 @@ export default function Layout({ children }) {
         <Link href='/docs/syllabus'><a>Syllabus</a></Link>
         <Link href='/docs/exercises'><a>Exercises</a></Link>
         <Link href='/docs/protocol'><a>Protocol</a></Link>
+        <a href='/blockchain-foundations.pdf'>Notes</a>
       </HStack>
     </header>
 
