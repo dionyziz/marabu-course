@@ -306,6 +306,9 @@
 - **Exercise 11**
 
 ## Lesson 12: Coding in Solidity
+
+**2021-07-22**
+
 - Reentrancy
 - Auctions
 - Front-running
@@ -318,6 +321,9 @@
 - **Exercise 12**
 
 ## Lesson 13: Superlight verification
+
+**2021-07-29**
+
 - The non-interactive prover/verifier model
 - The one honest prover assumption
 - The polylog verifier
@@ -335,6 +341,9 @@
 - Superlight mining
 
 ## Lesson 14: Proof of stake
+
+**2021-08-29**
+
 - The proof-of-work environmental impact
 - The honest stake assumption
 - Grinding attacks
