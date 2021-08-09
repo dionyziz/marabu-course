@@ -319,31 +319,63 @@
 
 ## Lesson 13: Superlight verification
 - The non-interactive prover/verifier model
+- The one honest prover assumption
 - The polylog verifier
 - Superblocks
-- The NIPoPoW protocol
+- The superblock equation: The level μ parameter
+- The LCA block and repetition for Chernoff concentration
+- The interactive PoPoW protocol
+- PoPoW interactivity succinctness: Logarithmic number of rounds
+- PoPoW communication succinctness: Constant communication per round
+- PoPoW security
+- Non-interactivity: The limited superfork argument
+- NIPoPoWs
+- Light mining with full verification in chains with state commitments
+- Online NIPoPoWs
 - Superlight mining
 
-## Lesson 14: Blockchain Governance
-- Soft forks
-- Hard forks
-- Velvet forks
-- TheDAO hack, Ethereum and Ethereum Classic
-- **Exercise 13**
-
-## Lesson 15: Variable difficulty
-- Epochs, the m parameter
-- Target recalculation and difficulty adjustment
-- Difficulty clamping, the τ parameter
-- **Exercise 14**
-
-## Lesson 16: Proof of stake
+## Lesson 14: Proof of stake
 - The proof-of-work environmental impact
 - The honest stake assumption
 - Grinding attacks
 - Proof-of-stake time: The slot
+- Combining honest and adversarial randomness to obtain unbiased randomness
+- Pseudorandomness: Getting more randomness from little randomness
 - Epoch randomness
 - Slot leaders
-- Verifiable random functions
 - The Ouroboros protocol
-- The Ouroboros Praos protocols
+- k+1 blocks in any continuous 2k slots
+- Secret Sharing Schemes
+- Verifiable Secret Sharing
+- Publicly Verifiable Secret Sharing
+- Force-opening commitments using honest majority
+- Verifiable random functions
+- The proof-of-stake equation
+- The Ouroboros Praos protocol
+
+## Lesson 15: DeFi, Blockchain Governance and Evolution
+- ERC-20 and ICOs
+- ERC-721, ERC-1155 and NFTs
+- Soft forks
+- Hard forks
+- Velvet forks
+- DAOs
+- TheDAO hack, Ethereum and Ethereum Classic
+- Epochs, the m parameter
+- Target recalculation and difficulty adjustment
+- Difficulty clamping, the τ parameter
+- **Exercises 13 and 14**
+
+## Lesson 16: Privacy Coins
+- The problem of linkability
+- The problem of traceability
+- Privacy in UTXO and in accounts
+- Address reuse
+- Ring signatures
+- Elliptic Curves as additive groups
+- Group generators
+- Private and public keys in elliptic curves
+- The DLOG problem in Elliptic Curves
+- Unlinkability using ring signatures
+- Untraceability using stealth addresses
+- CryptoNote and Monero
