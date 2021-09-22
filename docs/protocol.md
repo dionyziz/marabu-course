@@ -116,7 +116,21 @@ Transactions must satisfy the weak law of conservation: The sum of input values 
 equal or exceed the sum of output values. Any remaining value can be collected as fees
 by the miner confirming the transaction.
 
-If the transaction is a coinbase transaction, then it will not contain an `inputs` key.
+If the transaction is a coinbase transaction, then it will not contain an `inputs` key but it
+will contain a `height` key with the block's height as the value.
+
+```json
+{
+  "type": "transaction",
+  "height": 128,
+  "outputs": [
+    {
+      "pubkey": "077a2683d776a71139fd4db4d00c16703ba0753fc8bdc4bd6fc56614e659cde3",
+      "value": 50000000000
+    }
+  ]
+}
+```
 
 ## Blocks
 
@@ -162,9 +176,10 @@ All valid chains must extend genesis. Each block must have a timestamp which is 
 predecessor but not after the current time.
 
 The `txids` in a block may contain one coinbase transaction. This transaction must be the first in the
-txids. That transaction has no inputs. It has exactly one output which generates 50 * 10^12 new picabus
-and also collects fees from the transactions confirmed in the block. The value in this output cannot
-exceed the sum of the new coins plus the fees, but it can be less than this.
+txids. That transaction has no inputs but has a `height` key containing the height of the block
+the coinbase transaction is included in. It has exactly one output which generates
+50 * 10^12 new picabus and also collects fees from the transactions confirmed in the block. The value
+in this output cannot exceed the sum of the new coins plus the fees, but it can be less than this. The `height`
 
 All blocks must have a target `T` of `00000002af000000000000000000000000000000000000000000000000000000`.
 The genesis blockid is `00000000a420b7cefa2b7730243316921ed59ffe836e111ca3801f82a4f5360e`. Check this
@@ -183,8 +198,8 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.6.0`. If the version you receive differs
-from `0.6.x` you must disconnect. The message can also contain an `agent` key, with a string description
+must also contain a `version` key, which is always set to `0.7.0`. If the version you receive differs
+from `0.7.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
 You must exchange a hello message both ways before you exchange any
@@ -194,7 +209,7 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "agent": "Marabu-Core Client 0.7"
 }
 ```
