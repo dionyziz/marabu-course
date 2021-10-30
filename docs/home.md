@@ -40,6 +40,7 @@ The following implementations are solutions to the exercises. If you want to mak
 * [go-marabu](https://gogs.decrypto.org/gtklocker/go-marabu), a Marabu node in Go by Kostis Karantias
 * [marabou](https://github.com/pkakelas/marabou), a Marabu node in Typescript by Dimitris Lamprinos
 * [calabu](https://github.com/tzinas/calabu), a Marabu node in JavaScript by Apostolos Tzinas
+* [maracucho](https://github.com/gubatron/maracucho), a Marabu node in Java by Angel León
 * [malibu](https://github.com/dionyziz/marabu), a Marabu node in TypeScript by Dionysis Zindros (a bootstrapping node is running on keftes.di.uoa.gr:18018)
 
 ## Who is this course for?
