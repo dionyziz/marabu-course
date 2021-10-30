@@ -10,7 +10,7 @@
     * Goal: Make a simple working blockchain with a common protocol
     * The blockchains of all students must work with one another
 - An untrustworthy world
-  - The concept of self-enforcability:
+  - The concept of self-enforceability:
     * We don't want adversaries to be caught after the fact
     * We want adversarial behavior to be impossible
   - Adversaries can be *very* bad:
