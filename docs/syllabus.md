@@ -177,7 +177,7 @@
 - The UTXO as a state machine α with transaction transitions δ
 - Account states: Balances
 - A transaction in accounts
-- Replaybility and nonces
+- Replayability and nonces
 - The account balances as a state machine α with transaction transitions δ
 - Practical transactions in Bitcoin and Ethereum
 - Look at the Bitcoin and Ethereum transaction graph
