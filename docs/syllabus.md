@@ -33,7 +33,7 @@
 - What is money?
   - Money is not inherently worthy -- it has value because we socially ascribe value to it
   - It is a social construct, or social delusion (similar to laws, corporations, and human rights)
-  - Money today is fiat (but money as a social contrsuct is ascribed to "non-fiat" money such as gold and shells, too)
+  - Money today is fiat (but money as a social construct is ascribed to "non-fiat" money such as gold and shells, too)
   - Some historical notes on money
   - How do we know today who owns what? Did we track it through history? Do we have that history? No -- we trust our social environment. A kind of "honest majority" setting.
 - The role of computer science
