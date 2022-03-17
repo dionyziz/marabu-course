@@ -179,7 +179,7 @@ The `txids` in a block may contain one coinbase transaction. This transaction mu
 txids. That transaction has no inputs but has a `height` key containing the height of the block
 the coinbase transaction is included in. It has exactly one output which generates
 50 * 10^12 new picabus and also collects fees from the transactions confirmed in the block. The value
-in this output cannot exceed the sum of the new coins plus the fees, but it can be less than this. The `height`
+in this output cannot exceed the sum of the new coins plus the fees, but it can be less than this. No other transaction in the block should have the block miner as a sender (money received from the coinbase transaction cannot be spent in the same block).
 
 All blocks must have a target `T` of `00000002af000000000000000000000000000000000000000000000000000000`.
 The genesis blockid is `00000000a420b7cefa2b7730243316921ed59ffe836e111ca3801f82a4f5360e`. Check this
