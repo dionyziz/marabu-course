@@ -9,7 +9,7 @@ implementation must be resilient to simple and complex attacks. Simple attacks c
 the supply of invalid data. Complex attacks can involve signatures, proof-of-work,
 double spending, and blocks, all of which must be validated carefully.
 
-The chain is a variable-difficulty proof-of-work UTXO-based blockchain over a TCP
+The chain is a static difficulty proof-of-work UTXO-based blockchain over a TCP
 network protocol.
 
 The chain is called *Marabu* (like the bird, but spelled with *u* instead of *ou*), but you
