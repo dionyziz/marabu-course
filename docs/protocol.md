@@ -181,7 +181,7 @@ the coinbase transaction is included in. It has exactly one output which generat
 50 * 10^12 new picabus and also collects fees from the transactions confirmed in the block. The value
 in this output cannot exceed the sum of the new coins plus the fees, but it can be less than this. The
 `height` in the coinbase transaction must match the height of the block the transaction is contained in.
-This is so that coinbase transactions with the same public key in different blocks are distinct.
+This is so that coinbase transactions with the same public key in different blocks are distinct. No other transaction in the block should have the coinbase transaction as an input, i.e. money received from the coinbase transaction cannot be spent in the same block.
 
 All blocks must have a target `T` of `00000002af000000000000000000000000000000000000000000000000000000`.
 The genesis blockid is `00000000a420b7cefa2b7730243316921ed59ffe836e111ca3801f82a4f5360e`. Check this
