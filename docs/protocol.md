@@ -117,7 +117,7 @@ equal or exceed the sum of output values. Any remaining value can be collected a
 by the miner confirming the transaction.
 
 If the transaction is a coinbase transaction, then it will not contain an `inputs` key but it
-will contain a `height` key with the block's height as the value.
+will contain a `height` key with the block's height as the value. Coinbase transaction cannot be spent in the same block.
 
 ```json
 {
@@ -200,8 +200,8 @@ on its type.
 ## Hello
 
 When you connect to another client, you must both send a { "type": "hello" } message. The message
-must also contain a `version` key, which is always set to `0.7.0`. If the version you receive differs
-from `0.7.x` you must disconnect. The message can also contain an `agent` key, with a string description
+must also contain a `version` key, which is always set to `0.8.0`. If the version you receive differs
+from `0.8.x` you must disconnect. The message can also contain an `agent` key, with a string description
 of the node software name and version the node is running.
 
 You must exchange a hello message both ways before you exchange any
@@ -211,8 +211,8 @@ Messages can be sent in any order after that.
 ```json
 {
   "type": "hello",
-  "version": "0.7.0",
-  "agent": "Marabu-Core Client 0.7"
+  "version": "0.8.0",
+  "agent": "Marabu-Core Client 0.8"
 }
 ```
 
